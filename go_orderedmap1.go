@@ -8,8 +8,19 @@ import (
 )
 
 func main () {
-	fmt.Printf("runtime.GOOS = %s\n", runtime.GOOS)
-
+	goos := runtime.GOOS
+	fmt.Printf("runtime.GOOS = %s\n", goos)
+    switch goos {
+    case "windows":
+        //kp.WinKey()
+    case "darwin":
+        //kp.MacKey()
+    case "linux":
+        //kp.UnixKey()
+    default:
+        //kp.TryKey()
+    }
+	
 	m := orderedmap.NewOrderedMap()
 
 	m.Set("foo", "bar")
