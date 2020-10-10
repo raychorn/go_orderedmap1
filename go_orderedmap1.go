@@ -2,11 +2,14 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 
 	"github.com/elliotchance/orderedmap"
 )
 
 func main () {
+	fmt.Printf("runtime.GOOS = %s\n", runtime.GOOS)
+
 	m := orderedmap.NewOrderedMap()
 
 	m.Set("foo", "bar")
